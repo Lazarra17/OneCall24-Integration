@@ -9,8 +9,9 @@ public class OC24_GetCandidatesBatch implements Database.Batchable<OC24_RestResp
                 
         OC24_API_Setting__mdt apiSettings = [SELECT Endpoint__c
                                              FROM OC24_API_Setting__mdt
-                                             WHERE DeveloperName = 'Default'];
+                                             WHERE DeveloperName =: OC24_Constants.GENERIC_DEFAULT];
         hasMoreData = false;
+        successfulCandidateIds = new List<Id>(); 
         oc24Settings = apiSettings;
       	String paramString;
         //Add the LIMIT = 200 Parameter
@@ -47,7 +48,7 @@ public class OC24_GetCandidatesBatch implements Database.Batchable<OC24_RestResp
         if(oc24CandidateItems == NULL){
             return new List<OC24_RestResponseCollection.Candidate>();
             
-        }else if(oc24Candidate.records?.size() > 0 ){
+        }else if(!oc24Candidate.records?.isEmpty()){
             
             hasMoreData = oc24Candidate.more;
             oc24CandidateItems =  oc24Candidate.records;        
@@ -63,7 +64,7 @@ public class OC24_GetCandidatesBatch implements Database.Batchable<OC24_RestResp
         
         List<Candidate__c> candidatesForUpsert = new List<Candidate__c>();
         
-        if(oc24CandidateItems != NULL && oc24CandidateItems.size() > 0){
+        if(oc24CandidateItems != NULL && !oc24CandidateItems.isEmpty()){
             
             for(OC24_RestResponseCollection.Candidate candidate : oc24CandidateItems) {
                 
@@ -109,7 +110,7 @@ public class OC24_GetCandidatesBatch implements Database.Batchable<OC24_RestResp
     public void finish(Database.BatchableContext context) {
         
          //POST API Callout to confirm candidate records    
-        if(successfulCandidateIds.size() > 0){
+        if(!successfulCandidateIds.IsEmpty()){
             
             List<String> refs = new List<String>();
             for(Candidate__c candidate : [SELECT Id, MongoDB_Id__c FROM Candidate__c WHERE Id IN : successfulCandidateIds]){

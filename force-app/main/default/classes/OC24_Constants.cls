@@ -2,6 +2,7 @@ public class OC24_Constants {
     
     public static final String GENERIC_QUESTION_MARK = '?';
     public static final String GENERIC_EQUALS = '=';
+    public static final String GENERIC_DEFAULT = 'Default';
     
     public static final String ERROR_REQUEST_NOT_SET = 'Request has not been set.';
     
