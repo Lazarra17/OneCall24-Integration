@@ -28,10 +28,7 @@ This integration synchronizes candidate data from OneCall24 (MongoDB API) into S
 2. Execute the following code:
 
 ```apex
-Database.executeBatch(
-    new OC24_GetCandidatesBatch(''),
-    200
-);
+Database.executeBatch(new OC24_GetCandidatesBatch(),200);
 ```
 
 ---
