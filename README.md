@@ -54,20 +54,6 @@ HttpResponse res = http.send(req);
 System.debug(res.getBody());
 ```
 
-### Reset Candidate References
-
-```apex
-HttpRequest req = new HttpRequest();
-req.setEndpoint('callout:OC24_Connector/reset');
-req.setMethod('POST');
-req.setHeader('Content-Type', 'application/json');
-
-
-Http http = new Http();
-HttpResponse res = http.send(req);
-
-
-```
 
 ---
 
