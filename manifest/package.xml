@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+
+  
+    <types>
+        <members>*</members>
+        <name>ApexClass</name>
+    </types>
+
+    <!--types>
+        <members>*</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>CustomField</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>CustomTab</name>
+    </types>
+     <types>
+        <members>Candidate__c-Candidate Layout</members>
+        <members>Exception_Log__c-Exception Log Layout</members>
+        <members>Integration_Log__c-Integration Log Layout</members>
+        <members>OC24_API_Setting__mdt-OC24 API Setting Layout</members>
+        <name>Layout</name>
+    </types>
+    
+    <types>
+        <members>*</members>
+        <name>ExternalCredential</name>
+    </types>
+
+    <types>
+        <members>*</members>
+        <name>NamedCredential</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>CustomMetadata</name>
+    </types>
+
+     <types>
+        <members>Admin</members>
+        <name>Profile</name>
+    </types>
+
+    <types>
+        <members>reports/OC24Folder/All_Candidates_Report_4pG</members>
+        <name>Report</name>
+    </types>
+
+    <types>
+        <members>Candidate_Report</members>
+        <name>ReportType</name>
+    </types>
+
+    <types>
+        <members>dashboards/OC24Folder/IogJWYcFCerErBvAXrcbZiXhkMzmgp</members>
+        <name>Dashboard</name>
+    </types-->
+
+    <version>68.0</version>
+</Package>

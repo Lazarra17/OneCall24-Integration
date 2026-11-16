@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Candidate__c$Name</field>
+    </columns>
+    <columns>
+        <field>Candidate__c$First_Name__c</field>
+    </columns>
+    <columns>
+        <field>Candidate__c$Last_Name__c</field>
+    </columns>
+    <columns>
+        <field>Candidate__c$Email__c</field>
+    </columns>
+    <columns>
+        <field>Candidate__c$Mobile__c</field>
+    </columns>
+    <columns>
+        <field>Candidate__c$Job_Title__c</field>
+    </columns>
+    <columns>
+        <field>Candidate__c$Right_To_Work__c</field>
+    </columns>
+    <columns>
+        <field>Candidate__c$Interested__c</field>
+    </columns>
+    <format>Tabular</format>
+    <name>All Candidates Report</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Candidate_Report__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Candidate__c$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>
